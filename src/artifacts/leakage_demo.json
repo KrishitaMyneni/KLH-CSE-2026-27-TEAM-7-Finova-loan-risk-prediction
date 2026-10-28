@@ -1,0 +1,18 @@
+{
+  "model": "XGBoost, same hyperparameters and split",
+  "test_window": "2015-04 to 2015-09",
+  "n_test": 136712,
+  "application_features_only": {
+    "roc_auc": 0.6866,
+    "ks": 0.2686
+  },
+  "plus_leaked_columns": {
+    "columns": [
+      "total_pymnt",
+      "recoveries",
+      "last_pymnt_amnt"
+    ],
+    "roc_auc": 0.9969,
+    "ks": 0.9682
+  }
+}

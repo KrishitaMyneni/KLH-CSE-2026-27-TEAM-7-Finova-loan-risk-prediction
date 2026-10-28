@@ -1,0 +1,92 @@
+{
+  "trained_at": "2026-10-28T10:26:55",
+  "data_file": "accepted_2007_to_2018Q4.csv",
+  "nrows_limit": null,
+  "lc_signals_included": false,
+  "champion": "LightGBM",
+  "champion_selection": "highest calibration-window ROC-AUC among CHAMPION_ELIGIBLE",
+  "periods": {
+    "train": {
+      "n_loans": 261849,
+      "start": "2013-01",
+      "end": "2014-12",
+      "default_rate": 0.1319
+    },
+    "calibration": {
+      "n_loans": 56227,
+      "start": "2015-01",
+      "end": "2015-03",
+      "default_rate": 0.1483
+    },
+    "test": {
+      "n_loans": 136712,
+      "start": "2015-04",
+      "end": "2015-09",
+      "default_rate": 0.1494
+    }
+  },
+  "features": {
+    "numeric": [
+      "loan_amnt",
+      "annual_inc_log",
+      "dti",
+      "delinq_2yrs",
+      "fico_avg",
+      "inq_last_6mths",
+      "open_acc",
+      "pub_rec",
+      "revol_bal",
+      "revol_util",
+      "total_acc",
+      "mort_acc",
+      "pub_rec_bankruptcies",
+      "acc_open_past_24mths",
+      "bc_util",
+      "percent_bc_gt_75",
+      "credit_history_months",
+      "loan_to_income",
+      "emp_length_years",
+      "has_delinq_history",
+      "credit_utilisation",
+      "revol_util_high",
+      "delinq_severity_score",
+      "inq_velocity",
+      "credit_limit_util",
+      "open_acc_ratio"
+    ],
+    "categorical": [
+      "term",
+      "home_ownership",
+      "verification_status",
+      "purpose",
+      "initial_list_status",
+      "application_type",
+      "emp_length_band"
+    ]
+  },
+  "risk_thresholds": {
+    "low_max": 0.1,
+    "medium_max": 0.2
+  },
+  "decision_zones_test": {
+    "DECLINE": {
+      "n_loans": 33457,
+      "share": 0.2447,
+      "actual_default_rate": 0.2707,
+      "avg_predicted_pd": 0.2608
+    },
+    "APPROVE": {
+      "n_loans": 53928,
+      "share": 0.3945,
+      "actual_default_rate": 0.0687,
+      "avg_predicted_pd": 0.0665
+    },
+    "REVIEW": {
+      "n_loans": 49327,
+      "share": 0.3608,
+      "actual_default_rate": 0.1553,
+      "avg_predicted_pd": 0.1534
+    }
+  },
+  "python": "3.12.10"
+}

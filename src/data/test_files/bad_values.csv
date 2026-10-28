@@ -1,0 +1,5 @@
+loan_amnt,term,emp_length,home_ownership,annual_inc,verification_status,purpose,dti,delinq_2yrs,earliest_cr_line,issue_d,fico_range_low,fico_range_high,inq_last_6mths,open_acc,pub_rec,revol_bal,revol_util,total_acc,initial_list_status,application_type,mort_acc,pub_rec_bankruptcies,tot_cur_bal,tot_hi_cred_lim,bc_util,percent_bc_gt_75,acc_open_past_24mths
+abc, 36 months,6 years,MORTGAGE,43700.0,Source Verified,small_business,30.26,1,May-1996,Mar-2016,695,699,1,11,1,5004.0,60.2%,19,w,Individual,3.0,1,71651.0,23220.0,50.1,80.5,1
+29900.0, 36 months,9 years,MORTGAGE,-50000,Not Verified,debt_consolidation,6.07,1,Dec-1995,Dec-2016,705,709,0,15,1,690.0,16.1%,21,w,Individual,2.0,0,207330.0,173234.0,59.2,38.6,7
+20800.0, 36 months,1 year,MORTGAGE,119700.0,Source Verified,debt_consolidation,999,1,May-1991,Jul-2016,680,684,1,5,0,44119.0,55.3%,13,w,Individual,3.0,0,61358.0,525690.0,48.5,41.3,4
+20500.0, 36 months,,MORTGAGE,25400.0,Not Verified,debt_consolidation,18.06,0,Jun-1999,May-2016,1200,1204,2,8,0,3490.0,22.9%,19,w,Individual,4.0,0,29870.0,47982.0,59.0,40.1,6

@@ -1,0 +1,2 @@
+loan_amnt,term,emp_length,home_ownership,annual_inc,verification_status,purpose,dti,delinq_2yrs,earliest_cr_line,issue_d,fico_range_low,fico_range_high,inq_last_6mths,open_acc,pub_rec,revol_bal,revol_util,total_acc,initial_list_status,application_type,mort_acc,pub_rec_bankruptcies,tot_cur_bal,tot_hi_cred_lim,bc_util,percent_bc_gt_75,acc_open_past_24mths
+15000,36 months,5 years,MORTGAGE,75000,Source Verified,debt_consolidation,14.5,0,Jan-2010,Oct-2024,720,724,0,10,0,12000,35.0%,20,w,Individual,1,0,185000,240000,32.0,0.0,2

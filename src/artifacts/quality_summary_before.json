@@ -1,0 +1,49 @@
+{
+  "n_rows": 2260701,
+  "n_cols": 42,
+  "completeness": 97.85,
+  "validity": 99.99,
+  "consistency": 99.99,
+  "uniqueness": 99.37,
+  "overall_score": 99.12,
+  "grade": "A - Excellent",
+  "duplicates": {
+    "exact_duplicates": 0,
+    "id_duplicates": 0,
+    "near_duplicates": 14187,
+    "near_duplicate_key": [
+      "loan_amnt",
+      "term",
+      "int_rate",
+      "installment",
+      "grade",
+      "annual_inc",
+      "issue_d",
+      "addr_state",
+      "purpose"
+    ],
+    "uniqueness_score": 0.9937
+  },
+  "consistency_detail": {
+    "fico_low <= fico_high": {
+      "pass_rate": 1.0,
+      "n_violations": 33
+    },
+    "open_acc <= total_acc": {
+      "pass_rate": 1.0,
+      "n_violations": 64
+    },
+    "installment <= loan_amnt": {
+      "pass_rate": 1.0,
+      "n_violations": 33
+    },
+    "earliest_cr_line <= issue_d": {
+      "pass_rate": 1.0,
+      "n_violations": 0
+    },
+    "annual installments <= income": {
+      "pass_rate": 0.9995,
+      "n_violations": 1105
+    }
+  }
+}

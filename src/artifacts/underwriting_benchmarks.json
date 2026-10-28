@@ -1,0 +1,9 @@
+{
+  "fico_avg": 687.0,
+  "dti": 16.8,
+  "annual_inc": 60000.0,
+  "revol_util": 56.1,
+  "avg_pd": 0.1454,
+  "tau_low": 0.1,
+  "tau_high": 0.2
+}

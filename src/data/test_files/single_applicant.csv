@@ -1,0 +1,2 @@
+loan_amnt,term,emp_length,home_ownership,annual_inc,verification_status,purpose,dti,delinq_2yrs,earliest_cr_line,issue_d,fico_range_low,fico_range_high,inq_last_6mths,open_acc,pub_rec,revol_bal,revol_util,total_acc,initial_list_status,application_type,mort_acc,pub_rec_bankruptcies,tot_cur_bal,tot_hi_cred_lim,bc_util,percent_bc_gt_75,acc_open_past_24mths
+7100.0, 36 months,< 1 year,RENT,182400.0,Source Verified,debt_consolidation,2.55,0,Apr-1994,Oct-2016,705,709,1,6,0,78919.0,51.4%,13,w,Individual,1.0,0,457154.0,704144.0,66.7,40.9,5

@@ -1,0 +1,11 @@
+loan_amnt,term,emp_length,home_ownership,annual_inc,verification_status,purpose,dti,delinq_2yrs,earliest_cr_line,issue_d,fico_range_low,fico_range_high,inq_last_6mths,open_acc,pub_rec,revol_bal,revol_util,total_acc,initial_list_status,application_type,mort_acc,pub_rec_bankruptcies,tot_cur_bal,tot_hi_cred_lim,bc_util,percent_bc_gt_75,acc_open_past_24mths
+17800.0, 60 months,9 years,OWN,41800.0,Verified,other,16.61,0,Jan-1994,Apr-2018,695,699,0,7,0,2144.0,50.2%,22,w,Individual,2.0,0,97787.0,144958.0,60.8,13.3,1
+18200.0, 60 months,,MORTGAGE,124500.0,Verified,debt_consolidation,11.52,2,Apr-2014,Nov-2017,685,689,0,9,0,37292.0,43.4%,24,f,Individual,1.0,0,206260.0,597776.0,23.5,5.6,6
+5400.0, 60 months,8 years,MORTGAGE,62200.0,Not Verified,debt_consolidation,14.12,0,May-1999,Dec-2015,680,684,1,19,0,20837.0,65.6%,34,w,Individual,1.0,0,24233.0,137333.0,46.9,58.0,1
+18100.0, 60 months,,RENT,39300.0,Not Verified,credit_card,35.73,0,Oct-1996,Feb-2013,685,689,0,12,0,3893.0,60.3%,23,w,Individual,,0,33093.0,160388.0,31.3,61.9,4
+19700.0, 60 months,4 years,MORTGAGE,42000.0,Not Verified,debt_consolidation,54.13,0,Mar-2007,Oct-2018,720,724,0,10,0,7360.0,64.0%,24,w,Individual,1.0,0,57279.0,117070.0,33.5,68.6,7
+7700.0, 60 months,4 years,OWN,28400.0,Verified,credit_card,12.61,0,May-2010,Dec-2013,680,684,0,16,0,8648.0,86.8%,27,w,Individual,0.0,0,31325.0,45987.0,74.8,38.7,5
+10000.0, 60 months,3 years,RENT,119400.0,Not Verified,debt_consolidation,19.22,0,Feb-1997,May-2014,705,709,2,10,0,6054.0,56.9%,23,w,Individual,1.0,0,493884.0,605823.0,60.9,28.4,10
+11100.0, 60 months,4 years,MORTGAGE,94900.0,Not Verified,debt_consolidation,17.24,0,Jun-2004,Aug-2018,660,664,1,8,0,9492.0,55.6%,18,w,Individual,2.0,0,172244.0,290275.0,47.0,17.4,3
+19500.0, 60 months,8 years,MORTGAGE,99300.0,Source Verified,debt_consolidation,7.64,0,Sep-1986,Feb-2013,700,704,0,15,0,18485.0,47.8%,20,w,Individual,3.0,0,81989.0,439551.0,11.0,54.8,4
+5700.0, 60 months,2 years,MORTGAGE,49000.0,Verified,debt_consolidation,,0,Sep-2010,Oct-2016,660,664,0,6,0,8790.0,28.5%,19,w,Individual,1.0,0,213718.0,165667.0,84.2,33.1,1

@@ -1,0 +1,78 @@
+{
+  "reference": "train window",
+  "monitored": "test window",
+  "credit_score_psi": {
+    "psi": 0.0061,
+    "status": "Stable (PSI < 0.10)",
+    "n_expected": 261849,
+    "n_actual": 136712
+  },
+  "default_probability_psi": {
+    "psi": 0.006,
+    "status": "Stable (PSI < 0.10)",
+    "n_expected": 261849,
+    "n_actual": 136712
+  },
+  "features_psi": {
+    "dti": {
+      "psi": 0.0226,
+      "status": "Stable (PSI < 0.10)",
+      "n_expected": 261849,
+      "n_actual": 136712
+    },
+    "annual_inc_log": {
+      "psi": 0.0018,
+      "status": "Stable (PSI < 0.10)",
+      "n_expected": 261849,
+      "n_actual": 136712
+    },
+    "revol_bal": {
+      "psi": 0.0065,
+      "status": "Stable (PSI < 0.10)",
+      "n_expected": 261849,
+      "n_actual": 136712
+    },
+    "acc_open_past_24mths": {
+      "psi": 0.0221,
+      "status": "Stable (PSI < 0.10)",
+      "n_expected": 261849,
+      "n_actual": 136712
+    },
+    "credit_history_months": {
+      "psi": 0.0059,
+      "status": "Stable (PSI < 0.10)",
+      "n_expected": 261849,
+      "n_actual": 136712
+    },
+    "bc_util": {
+      "psi": 0.0203,
+      "status": "Stable (PSI < 0.10)",
+      "n_expected": 259125,
+      "n_actual": 135289
+    },
+    "fico_avg": {
+      "psi": 0.003,
+      "status": "Stable (PSI < 0.10)",
+      "n_expected": 261849,
+      "n_actual": 136712
+    },
+    "credit_utilisation": {
+      "psi": 0.006,
+      "status": "Stable (PSI < 0.10)",
+      "n_expected": 261840,
+      "n_actual": 136712
+    },
+    "loan_to_income": {
+      "psi": 0.0036,
+      "status": "Stable (PSI < 0.10)",
+      "n_expected": 261849,
+      "n_actual": 136712
+    },
+    "revol_util": {
+      "psi": 0.0216,
+      "status": "Stable (PSI < 0.10)",
+      "n_expected": 261716,
+      "n_actual": 136650
+    }
+  }
+}

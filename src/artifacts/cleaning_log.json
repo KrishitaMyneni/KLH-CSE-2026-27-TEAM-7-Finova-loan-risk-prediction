@@ -1,0 +1,100 @@
+[
+  {
+    "step": "target",
+    "detail": "kept resolved loans only; dropped unresolved statuses ['Current', 'Late (31-120 days)', 'In Grace Period', 'Late (16-30 days)']",
+    "rows_before": 2260701,
+    "rows_after": 1348099,
+    "rows_removed": 912602
+  },
+  {
+    "step": "target",
+    "detail": "default rate = 19.98%"
+  },
+  {
+    "step": "parse",
+    "detail": "term -> numeric months"
+  },
+  {
+    "step": "parse",
+    "detail": "int_rate -> numeric",
+    "values_affected": 1348099
+  },
+  {
+    "step": "parse",
+    "detail": "revol_util -> numeric",
+    "values_affected": 1347202
+  },
+  {
+    "step": "parse",
+    "detail": "bc_util -> numeric",
+    "values_affected": 1283436
+  },
+  {
+    "step": "parse",
+    "detail": "percent_bc_gt_75 -> numeric",
+    "values_affected": 1283793
+  },
+  {
+    "step": "parse",
+    "detail": "emp_length -> emp_length_years (0-10)"
+  },
+  {
+    "step": "parse",
+    "detail": "issue_d -> datetime"
+  },
+  {
+    "step": "parse",
+    "detail": "earliest_cr_line -> datetime"
+  },
+  {
+    "step": "filter",
+    "detail": "kept loans issued from 2013 onwards",
+    "rows_before": 1348099,
+    "rows_after": 1252197,
+    "rows_removed": 95902
+  },
+  {
+    "step": "filter",
+    "detail": "kept 36-month term loans only",
+    "rows_before": 1252197,
+    "rows_after": 948202,
+    "rows_removed": 303995
+  },
+  {
+    "step": "maturity_filter",
+    "detail": "kept loans matured by 2018-09-01 (snapshot 2018-12-01 - 3m buffer)",
+    "rows_before": 948202,
+    "rows_after": 457349,
+    "rows_removed": 490853
+  },
+  {
+    "step": "missing",
+    "detail": "dropped 1 columns over 50% missing: mths_since_last_delinq"
+  },
+  {
+    "step": "duplicates",
+    "detail": "removed exact duplicate rows",
+    "rows_before": 457349,
+    "rows_after": 457349,
+    "rows_removed": 0
+  },
+  {
+    "step": "duplicates",
+    "detail": "removed near-duplicates on business key (9 cols)",
+    "rows_before": 457349,
+    "rows_after": 454788,
+    "rows_removed": 2561
+  },
+  {
+    "step": "duplicates",
+    "detail": "removed duplicate loan ids",
+    "rows_before": 454788,
+    "rows_after": 454788,
+    "rows_removed": 0
+  },
+  {
+    "step": "impute",
+    "detail": "numeric gaps left for the pipeline's training-median imputer",
+    "values_affected": 41249
+  }
+]

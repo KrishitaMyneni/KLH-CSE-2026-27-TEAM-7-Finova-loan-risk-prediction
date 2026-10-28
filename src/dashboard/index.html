@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Risk Scoring — Underwriting console</title>
+  <script>
+    // Applied before first paint so the saved theme does not flash.
+    try {
+      var savedTheme = localStorage.getItem("crc-theme");
+      if (savedTheme === "dark" || savedTheme === "light") {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+    } catch (e) { /* storage unavailable */ }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css?v=3.8">
+  <script src="/static/vendor/chart.umd.min.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="app-bar">
+    <div class="app-bar__brand">
+      <span class="app-bar__name">Credit Risk Scoring</span>
+      <span class="app-bar__divider" aria-hidden="true"></span>
+      <span class="app-bar__sub">Underwriting console</span>
+    </div>
+
+    <div class="app-bar__actions">
+      <p class="app-bar__model" id="model-note"></p>
+      <a class="btn btn--ghost btn--sm" href="/api/template">
+        <span class="btn__icon" data-icon="download" aria-hidden="true"></span>
+        Template
+      </a>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+        <span class="btn__icon" data-icon="moon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="page" id="main">
+    <div class="page__header">
+      <h1 class="page__title" id="page-title">New applicant</h1>
+      <div class="mode-switch" role="tablist" aria-label="Scoring mode" id="mode-switch">
+        <button class="mode-switch__item is-active" type="button" role="tab" aria-selected="true" data-mode="single">Single applicant</button>
+        <button class="mode-switch__item" type="button" role="tab" aria-selected="false" data-mode="batch">CSV batch</button>
+      </div>
+    </div>
+    <p class="page__meta" id="page-meta" hidden></p>
+
+    <!-- Single applicant: application -->
+    <section class="view" id="view-application" aria-labelledby="page-title">
+      <form class="form" id="applicant-form" novalidate>
+        <div class="notice notice--error" id="form-summary" role="alert" hidden></div>
+        <div id="form-sections"></div>
+        <div class="form__actions">
+          <button class="btn btn--primary" type="submit" id="submit-applicant">Score applicant</button>
+          <button class="btn btn--secondary" type="button" id="reset-form">Reset to example</button>
+        </div>
+        <div class="notice notice--error" id="form-error" role="alert" hidden></div>
+      </form>
+    </section>
+
+    <!-- Single applicant: assessment -->
+    <section class="view" id="view-assessment" aria-labelledby="page-title" hidden></section>
+
+    <!-- CSV batch -->
+    <section class="view" id="view-batch" aria-labelledby="page-title" hidden>
+      <div id="batch-input">
+        <div class="split">
+          <div class="split__main">
+            <h2 class="section-title">Upload applicant CSV</h2>
+            <div class="file-control" id="file-control" role="button" tabindex="0" aria-controls="file-input">
+              <span class="file-control__icon" data-icon="upload" aria-hidden="true"></span>
+              <span class="file-control__text">
+                <span class="file-control__title">Choose a .csv file</span>
+                <span class="file-control__hint">Drag a file here or select one. Maximum 5 MB.</span>
+              </span>
+              <span class="btn btn--secondary btn--sm">Browse</span>
+            </div>
+            <input class="visually-hidden" type="file" id="file-input" accept=".csv">
+            <p class="hint-row">Columns must match the scoring template. <a href="/api/template">Download CSV template</a></p>
+            <div class="notice notice--error" id="batch-error" role="alert" hidden></div>
+
+            <details class="disclosure" id="columns-disclosure">
+              <summary><span data-icon="chevron-right" data-icon-size="13"></span>Columns the template contains</summary>
+              <div class="disclosure__body">
+                <p class="column-list" id="column-list"></p>
+              </div>
+            </details>
+          </div>
+
+          <aside class="split__aside">
+            <h2 class="section-title">Example datasets</h2>
+            <ul class="dataset-list" id="dataset-list">
+              <li>
+                <button class="dataset-list__name" type="button" data-demo="/api/demo-batch" data-filename="demo_batch_300.csv">300 applicants</button>
+                <span class="dataset-list__note">36-month sample with 6 sixty-month records</span>
+              </li>
+              <li>
+                <button class="dataset-list__name" type="button" data-demo="/api/example-batch" data-filename="example_applicants.csv">5 applicants</button>
+                <span class="dataset-list__note">4 scored, 1 sixty-month record</span>
+              </li>
+              <li>
+                <button class="dataset-list__name" type="button" data-demo="/api/mixed-batch" data-filename="mixed_good_bad.csv">Mixed quality</button>
+                <span class="dataset-list__note">20 records: 18 scored, 2 invalid</span>
+              </li>
+              <li>
+                <button class="dataset-list__name" type="button" data-demo="/api/ineligible-batch" data-filename="all_60_month.csv">All sixty-month</button>
+                <span class="dataset-list__note">No records scored under policy</span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+
+      <div id="batch-results" hidden>
+        <div class="result-head">
+          <p class="result-head__meta" id="results-meta"></p>
+          <div class="result-head__actions">
+            <button class="btn btn--secondary btn--sm" type="button" id="export-csv">
+              <span class="btn__icon" data-icon="download" aria-hidden="true"></span>
+              Export scored CSV
+            </button>
+            <button class="btn btn--primary btn--sm" type="button" data-action="new-assessment">New assessment</button>
+          </div>
+        </div>
+
+        <div class="notice notice--warn" id="batch-warning" hidden></div>
+
+        <div class="tabs" role="tablist" aria-label="Batch result views" id="batch-tabs">
+          <button class="tabs__item is-active" type="button" role="tab" aria-selected="true" data-tab="applicants">Applicants</button>
+          <button class="tabs__item" type="button" role="tab" aria-selected="false" data-tab="portfolio">Portfolio</button>
+          <button class="tabs__item" type="button" role="tab" aria-selected="false" data-tab="issues">Input issues</button>
+        </div>
+
+        <div class="tab-panel" id="tab-applicants" role="tabpanel">
+          <div class="toolbar" id="applicants-toolbar">
+            <div class="toolbar__search">
+              <span class="toolbar__search-icon" data-icon="search" aria-hidden="true"></span>
+              <label class="visually-hidden" for="search-input">Search applicants</label>
+              <input class="input input--search" type="search" id="search-input" placeholder="Applicant # or purpose" autocomplete="off">
+            </div>
+            <div class="toolbar__filters" id="decision-filters"></div>
+            <div class="toolbar__selects">
+              <label class="visually-hidden" for="band-filter">Risk band</label>
+              <select class="select" id="band-filter">
+                <option value="ALL">All risk bands</option>
+                <option value="Low Risk">Low risk</option>
+                <option value="Medium Risk">Medium risk</option>
+                <option value="High Risk">High risk</option>
+              </select>
+              <label class="visually-hidden" for="page-size">Rows per page</label>
+              <select class="select" id="page-size">
+                <option value="10">10 rows</option>
+                <option value="25" selected>25 rows</option>
+                <option value="50">50 rows</option>
+                <option value="100">100 rows</option>
+              </select>
+            </div>
+          </div>
+          <div class="table-scroll">
+            <table class="data-table" id="applicants-table">
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="pagination" id="applicants-pagination"></div>
+        </div>
+
+        <div class="tab-panel" id="tab-portfolio" role="tabpanel" hidden>
+          <dl class="summary-strip" id="summary-strip"></dl>
+          <div class="chart-grid" id="chart-grid">
+            <figure class="chart-frame">
+              <figcaption class="chart-frame__head">
+                <span class="chart-frame__title">Decision mix</span>
+                <span class="chart-frame__unit">Records</span>
+              </figcaption>
+              <div class="chart-frame__body"><canvas id="chart-decision"></canvas></div>
+              <div class="visually-hidden" id="table-decision"></div>
+            </figure>
+            <figure class="chart-frame">
+              <figcaption class="chart-frame__head">
+                <span class="chart-frame__title">Probability of default</span>
+                <span class="chart-frame__unit">Applicants per band</span>
+              </figcaption>
+              <div class="chart-frame__body"><canvas id="chart-pd"></canvas></div>
+              <div class="visually-hidden" id="table-pd"></div>
+            </figure>
+            <figure class="chart-frame">
+              <figcaption class="chart-frame__head">
+                <span class="chart-frame__title">Exposure and expected loss</span>
+                <span class="chart-frame__unit">USD by risk band</span>
+              </figcaption>
+              <div class="chart-frame__body"><canvas id="chart-exposure"></canvas></div>
+              <div class="visually-hidden" id="table-exposure"></div>
+            </figure>
+            <figure class="chart-frame">
+              <figcaption class="chart-frame__head">
+                <span class="chart-frame__title">Model score distribution</span>
+                <span class="chart-frame__unit">Applicants per score range</span>
+              </figcaption>
+              <div class="chart-frame__body"><canvas id="chart-score"></canvas></div>
+              <div class="visually-hidden" id="table-score"></div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-issues" role="tabpanel" hidden></div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="drawer" id="drawer" hidden></aside>
+
+  <script src="/static/js/core.js?v=3.8"></script>
+  <script src="/static/js/form.js?v=3.8"></script>
+  <script src="/static/js/views.js?v=3.8"></script>
+  <script src="/static/js/charts.js?v=3.8"></script>
+  <script src="/static/js/app.js?v=3.8"></script>
+</body>
+</html>

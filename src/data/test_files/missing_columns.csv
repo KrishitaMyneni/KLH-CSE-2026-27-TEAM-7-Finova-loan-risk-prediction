@@ -1,0 +1,21 @@
+loan_amnt,term,emp_length,home_ownership,verification_status,purpose,dti,delinq_2yrs,earliest_cr_line,issue_d,fico_range_high,inq_last_6mths,open_acc,pub_rec,revol_bal,revol_util,total_acc,initial_list_status,application_type,mort_acc,pub_rec_bankruptcies,tot_cur_bal,tot_hi_cred_lim,bc_util,percent_bc_gt_75,acc_open_past_24mths
+20500.0, 36 months,1 year,RENT,Source Verified,credit_card,10.86,0,Jun-2005,Jun-2016,699,2,15,0,22340.0,35.3%,26,w,Individual,1.0,0,,1004673.0,31.7,83.2,6
+5800.0, 36 months,4 years,MORTGAGE,Not Verified,small_business,16.96,0,Jan-2007,Mar-2016,729,0,11,0,85504.0,71.4%,29,w,Individual,2.0,0,279776.0,1566404.0,20.6,66.3,6
+11400.0, 36 months,9 years,OWN,Verified,debt_consolidation,22.43,0,Aug-2007,May-2016,754,1,13,0,14494.0,23.6%,27,w,Individual,0.0,0,142422.0,129075.0,59.0,5.4,6
+8900.0, 36 months,8 years,OWN,Source Verified,debt_consolidation,17.18,0,Aug-1986,May-2016,714,1,15,1,11840.0,60.6%,33,w,Individual,2.0,1,217706.0,191301.0,34.4,57.1,2
+15500.0, 36 months,3 years,MORTGAGE,Source Verified,debt_consolidation,11.74,1,Mar-1989,Jan-2016,689,1,14,0,10335.0,27.5%,32,f,Individual,0.0,0,474259.0,273300.0,58.6,7.8,4
+6200.0, 36 months,1 year,RENT,Verified,credit_card,14.23,0,Feb-1986,Nov-2016,684,1,10,1,3246.0,63.5%,26,w,Individual,0.0,0,43136.0,31272.0,68.0,16.1,8
+15400.0, 36 months,4 years,RENT,Not Verified,debt_consolidation,11.75,0,Oct-1993,Jun-2016,729,0,5,1,4890.0,23.6%,18,w,Individual,2.0,0,,125875.0,73.6,11.0,2
+24700.0, 36 months,8 years,MORTGAGE,Source Verified,debt_consolidation,8.62,0,Aug-2001,Nov-2016,674,0,15,1,7846.0,42.0%,27,w,Individual,3.0,0,29352.0,49072.0,88.2,22.3,7
+6900.0, 36 months,6 years,RENT,Not Verified,debt_consolidation,13.92,0,Jul-2005,Dec-2016,729,1,11,1,2543.0,42.2%,21,w,Individual,0.0,0,,103736.0,,6.7,7
+7000.0, 36 months,8 years,RENT,Verified,credit_card,8.69,0,Jun-2001,Aug-2016,664,2,10,0,793.0,36.6%,27,w,Individual,1.0,0,127834.0,245535.0,87.0,49.2,5
+11500.0, 36 months,9 years,MORTGAGE,Verified,debt_consolidation,24.47,1,Oct-2002,Aug-2016,664,0,15,0,530.0,60.0%,25,w,Individual,1.0,0,78747.0,48891.0,73.7,42.8,4
+17800.0, 36 months,9 years,RENT,Verified,other,18.9,0,Jun-2003,Sep-2016,684,0,9,0,4187.0,62.9%,23,w,Individual,0.0,0,,383868.0,54.0,68.7,5
+14500.0, 36 months,8 years,RENT,Verified,debt_consolidation,10.56,0,Sep-2011,Dec-2016,694,2,4,1,37881.0,38.8%,20,w,Individual,4.0,0,225274.0,284974.0,62.7,14.8,9
+17200.0, 36 months,5 years,RENT,Source Verified,credit_card,24.7,0,Sep-2000,Sep-2016,694,0,14,0,16274.0,67.0%,22,f,Individual,1.0,0,77112.0,159211.0,31.0,17.8,4
+18100.0, 36 months,,MORTGAGE,Source Verified,debt_consolidation,47.13,0,Dec-2005,Dec-2016,694,2,10,1,6464.0,39.0%,26,w,Individual,0.0,1,46587.0,136307.0,9.1,90.4,0
+19600.0, 36 months,10+ years,RENT,Verified,other,18.94,0,May-1995,Aug-2016,664,1,11,0,2540.0,82.7%,30,w,Individual,1.0,0,69687.0,104868.0,12.1,12.1,3
+20900.0, 36 months,9 years,RENT,Source Verified,debt_consolidation,28.75,0,Mar-2002,Apr-2016,694,0,9,0,10170.0,45.1%,23,f,Individual,1.0,0,78395.0,265414.0,52.2,39.8,5
+23600.0, 36 months,10+ years,MORTGAGE,Source Verified,credit_card,13.76,0,Jun-1999,Sep-2016,704,1,11,0,32847.0,31.5%,19,f,Individual,1.0,0,33306.0,379991.0,9.7,19.1,3
+28200.0, 36 months,3 years,RENT,Not Verified,credit_card,19.95,0,Dec-2009,Nov-2016,724,1,18,0,25323.0,16.9%,31,w,Individual,0.0,0,106204.0,95396.0,65.5,62.2,1
+15400.0, 36 months,4 years,RENT,Not Verified,credit_card,16.65,1,Sep-1987,Feb-2016,804,0,17,0,5153.0,23.5%,28,w,Individual,1.0,0,36485.0,114207.0,55.5,18.5,3

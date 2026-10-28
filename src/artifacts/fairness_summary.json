@@ -1,0 +1,48 @@
+{
+  "home_ownership": {
+    "min_adverse_impact_ratio": 0.516,
+    "groups_failing_four_fifths": [
+      "RENT",
+      "OWN"
+    ],
+    "max_abs_calibration_gap": 0.0064,
+    "auc_range": [
+      0.6681,
+      0.6928
+    ]
+  },
+  "income_band": {
+    "min_adverse_impact_ratio": 0.238,
+    "groups_failing_four_fifths": [
+      "Q2",
+      "Q3",
+      "Q1 (lowest)"
+    ],
+    "max_abs_calibration_gap": 0.0094,
+    "auc_range": [
+      0.6521,
+      0.7034
+    ]
+  },
+  "region": {
+    "min_adverse_impact_ratio": 0.953,
+    "groups_failing_four_fifths": [],
+    "max_abs_calibration_gap": 0.0095,
+    "auc_range": [
+      0.6825,
+      0.695
+    ]
+  },
+  "verification_status": {
+    "min_adverse_impact_ratio": 0.469,
+    "groups_failing_four_fifths": [
+      "Source Verified",
+      "Verified"
+    ],
+    "max_abs_calibration_gap": 0.0121,
+    "auc_range": [
+      0.6708,
+      0.6877
+    ]
+  }
+}

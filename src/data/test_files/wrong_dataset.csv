@@ -1,0 +1,21 @@
+age,sex,job,housing,saving_accounts,checking_account,credit_amount,duration_months,purpose
+67,male,2,own,little,little,1169,6,radio/TV
+22,female,2,own,little,moderate,5951,48,radio/TV
+49,male,1,own,little,none,2096,12,education
+45,male,2,free,little,little,7882,42,furniture/equipment
+53,male,2,free,little,little,4870,24,car
+35,male,1,free,none,none,9055,36,education
+53,male,2,own,quite rich,none,2835,24,furniture/equipment
+35,male,3,rent,little,moderate,6948,36,car
+61,male,1,own,rich,none,3059,12,radio/TV
+28,male,3,own,little,moderate,5234,30,car
+25,female,2,rent,little,moderate,1295,12,car
+24,female,2,rent,little,none,4308,48,business
+22,female,2,own,little,moderate,1567,12,radio/TV
+60,male,1,own,little,little,1199,24,car
+28,female,2,rent,little,little,1403,12,car
+32,female,1,own,moderate,little,1282,15,radio/TV
+53,male,2,own,none,none,2424,24,radio/TV
+35,male,2,own,little,little,8072,30,car
+44,female,3,free,little,moderate,12579,24,car
+31,male,2,own,quite rich,none,3430,24,radio/TV

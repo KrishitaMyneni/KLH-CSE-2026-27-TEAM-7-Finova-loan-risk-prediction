@@ -1,0 +1,42 @@
+column,dtype,n_missing,pct_missing,completeness,n_unique,validity,n_invalid,has_rule,top_value,min,median,max,n_outliers_iqr
+emp_length_years,float64,27050,5.95,0.9405,11,,0,False,,0.0,6.0,10.0,0.0
+bc_util,float64,4778,1.05,0.9895,1314,1.0,7,True,,0.0,66.9,339.6,4.0
+percent_bc_gt_75,float64,4722,1.04,0.9896,193,1.0,0,True,,0.0,50.0,100.0,0.0
+bc_open_to_buy,float64,4469,0.98,0.9902,50292,,0,False,,0.0,3763.0,332178.0,19292.0
+revol_util,float64,221,0.05,0.9995,1201,1.0,1,True,,0.0,54.8,892.3,5.0
+tot_hi_cred_lim,float64,0,0.0,1.0,237096,,0,False,,0.0,92526.0,9999999.0,3553.0
+pub_rec_bankruptcies,float64,0,0.0,1.0,11,,0,False,,0.0,0.0,12.0,0.0
+total_bc_limit,float64,0,0.0,1.0,8726,,0,False,,0.0,13400.0,760000.0,8979.0
+num_tl_op_past_12m,float64,0,0.0,1.0,27,,0,False,,0.0,2.0,26.0,1446.0
+num_actv_bc_tl,float64,0,0.0,1.0,29,,0,False,,0.0,3.0,28.0,643.0
+revol_bal,float64,0,0.0,1.0,57893,,0,False,,0.0,10741.0,2904836.0,9971.0
+data_source,object,0,0.0,1.0,1,,0,False,accepted_2007_to_2018Q4.csv,,,,
+default_flag,int32,0,0.0,1.0,2,,0,False,,0.0,0.0,1.0,0.0
+avg_cur_bal,float64,9,0.0,1.0,56694,,0,False,,0.0,6247.0,958084.0,7666.0
+acc_open_past_24mths,float64,0,0.0,1.0,43,,0,False,,0.0,4.0,53.0,744.0
+tot_cur_bal,float64,0,0.0,1.0,228242,,0,False,,0.0,64405.0,4772549.0,3718.0
+application_type,object,0,0.0,1.0,1,,0,False,Individual,,,,
+initial_list_status,object,0,0.0,1.0,2,,0,False,f,,,,
+total_acc,float64,0,0.0,1.0,120,1.0,0,True,,2.0,23.0,169.0,294.0
+mort_acc,float64,0,0.0,1.0,33,,0,False,,0.0,1.0,47.0,468.0
+id,object,0,0.0,1.0,454788,,0,False,65419,,,,
+loan_amnt,float64,0,0.0,1.0,1358,1.0,0,True,,1000.0,10000.0,35000.0,0.0
+open_acc,float64,0,0.0,1.0,68,1.0,0,True,,0.0,10.0,84.0,1600.0
+term,int64,0,0.0,1.0,1,1.0,0,True,,36.0,36.0,36.0,0.0
+int_rate,float64,0,0.0,1.0,170,1.0,0,True,,5.32,12.29,28.99,0.0
+installment,float64,0,0.0,1.0,42854,1.0,0,True,,14.01,349.65,1424.57,0.0
+grade,object,0,0.0,1.0,7,1.0,0,True,B,,,,
+sub_grade,object,0,0.0,1.0,35,,0,False,B3,,,,
+home_ownership,object,0,0.0,1.0,4,1.0,0,True,MORTGAGE,,,,
+annual_inc,float64,0,0.0,1.0,29922,1.0,14,True,,3000.0,60000.0,8900060.0,6806.0
+verification_status,object,0,0.0,1.0,3,,0,False,Source Verified,,,,
+issue_d,datetime64[ns],0,0.0,1.0,33,,0,False,2015-07-01 00:00:00,,,,
+purpose,object,0,0.0,1.0,14,,0,False,debt_consolidation,,,,
+addr_state,object,0,0.0,1.0,51,,0,False,CA,,,,
+dti,float64,0,0.0,1.0,4000,1.0,0,True,,0.0,17.24,39.99,0.0
+delinq_2yrs,float64,0,0.0,1.0,25,1.0,0,True,,0.0,0.0,29.0,0.0
+earliest_cr_line,datetime64[ns],0,0.0,1.0,673,,0,False,2001-08-01 00:00:00,,,,
+fico_range_low,float64,0,0.0,1.0,38,1.0,0,True,,660.0,685.0,845.0,208.0
+fico_range_high,float64,0,0.0,1.0,38,1.0,0,True,,664.0,689.0,850.0,208.0
+inq_last_6mths,float64,0,0.0,1.0,7,,0,False,,0.0,0.0,6.0,2567.0
+pub_rec,float64,0,0.0,1.0,25,1.0,2,True,,0.0,0.0,63.0,0.0

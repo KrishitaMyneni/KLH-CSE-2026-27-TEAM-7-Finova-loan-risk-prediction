@@ -1,0 +1,6 @@
+loan_amnt,term,emp_length,home_ownership,annual_inc,verification_status,purpose,dti,delinq_2yrs,earliest_cr_line,issue_d,fico_range_low,fico_range_high,inq_last_6mths,open_acc,pub_rec,revol_bal,revol_util,total_acc,initial_list_status,application_type,mort_acc,pub_rec_bankruptcies,tot_cur_bal,tot_hi_cred_lim,bc_util,percent_bc_gt_75,acc_open_past_24mths
+12000,36 months,10+ years,MORTGAGE,115000,Source Verified,home_improvement,8.5,0,May-2003,Oct-2024,785,789,0,12,0,8500,12.5%,24,w,Individual,2,0,210000,295000,14.2,0.0,1
+15000,36 months,5 years,RENT,68000,Source Verified,debt_consolidation,15.2,0,Aug-2011,Oct-2024,720,724,0,10,0,11400,32.0%,18,w,Individual,0,0,32000,58000,34.5,0.0,2
+10000,36 months,3 years,RENT,48000,Not Verified,debt_consolidation,21.8,0,Oct-2014,Oct-2024,670,674,1,8,0,9800,58.4%,15,f,Individual,0,0,18500,28000,62.0,50.0,4
+20000,36 months,2 years,RENT,36000,Verified,credit_card,28.5,1,Nov-2013,Oct-2024,635,639,2,7,1,16200,84.5%,14,f,Individual,0,1,19200,22500,86.0,100.0,6
+18000,60 months,7 years,MORTGAGE,75000,Verified,debt_consolidation,18.0,0,Jan-2010,Oct-2024,705,709,0,11,0,14000,45.0%,20,w,Individual,1,0,145000,185000,42.0,25.0,2
